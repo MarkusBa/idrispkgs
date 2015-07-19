@@ -1,4 +1,4 @@
-{ stdenv, annotatedWlPprint, ansiTerminal, ansiWlPprint
+{ cabal, annotatedWlPprint, ansiTerminal, ansiWlPprint
 , base64Bytestring, binary, blazeHtml, blazeMarkup, boehmgc
 , cheapskate, deepseq, filepath, fingertree, gmp, happy, haskeline
 , lens, libffi, mtl, network, optparseApplicative, parsers, safe
@@ -7,7 +7,7 @@
 , fetchFromGitHub
 }:
 
-stdenv.mkDerivation (self: {
+cabal.mkDerivation (self: {
   pname = "idris";
   src = fetchFromGitHub {
     owner = "puffnfresh";

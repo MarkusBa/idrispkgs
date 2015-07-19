@@ -1,14 +1,5 @@
-{ stdenv,
-  nixpkgs ? import <nixpkgs> {} 
-, idris_plain ? nixpkgs.haskellPackages.callPackage ./idris_plain { 
-  stdenv = stdenv;    
-  inherit (nixpkgs.haskellPackages) annotatedWlPprint ansiTerminal ansiWlPprint
-  base64Bytestring binary blazeHtml blazeMarkup boehmgc
-  cheapskate deepseq filepath fingertree gmp happy haskeline
-  lens libffi mtl network optparseApplicative parsers safe
-  split text time transformers trifecta unorderedContainers
-  utf8String vector vectorBinaryInstances xml zlib
-  fetchFromGitHub;}
+{ nixpkgs ? import <nixpkgs> {} 
+, idris_plain ? nixpkgs.haskellPackages.callPackage ./idris_plain {}
 }:
 
 with nixpkgs;

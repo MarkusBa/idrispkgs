@@ -1,5 +1,5 @@
 with import <nixpkgs> { };
-with import ./default.nix { stdenv = stdenv;};
+with import ./default.nix { };
 
 let myIdris = idrisWithPackages [ idris-config ];
 in
