@@ -13,7 +13,7 @@
        src = fetchFromGitHub {
          owner = "MarkusBa";
          repo = "Idris-dev";
-         rev = "v-0.9.18.1";
+         rev = "master";
          sha256 = "c7ea19c8dddf60f2fa77cc9bf8ff2101679cb8c7da3fa9ec49b376a3deda6e6d";
        };
        isLibrary = true;
