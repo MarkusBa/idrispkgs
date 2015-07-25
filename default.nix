@@ -1,11 +1,22 @@
-{ nixpkgs ? import <nixpkgs> {} 
-, idris_plain ? nixpkgs.haskellPackages.callPackage ./idris_plain {}
+{ stdenv, 
+  nixpkgs ? import <nixpkgs> {} 
+, idris_plain ? nixpkgs.haskellPackages.callPackage ./idris_plain {
+  stdenv = stdenv;
+  inherit (nixpkgs) boehmgc gmp fetchFromGitHub;     
+  inherit (nixpkgs.haskellPackages) mkDerivation annotated-wl-pprint ansi-terminal ansi-wl-pprint
+      base base64-bytestring binary blaze-html blaze-markup
+      bytestring cheapskate containers deepseq directory
+      filepath fingertree happy haskeline lens libffi mtl
+      network optparse-applicative parsers pretty process safe
+      split text time transformers transformers-compat trifecta
+      uniplate unix unordered-containers utf8-string vector
+      vector-binary-instances xml zip-archive zlib;}
 }:
 
 with nixpkgs;
 
 let
-  libraryDirectory = "${idris_plain.system}-ghc-${idris_plain.ghc.version}/${idris_plain.fname}";
+  libraryDirectory = "${idris_plain.system}-ghc-${nixpkgs.haskellPackages.ghc.version}/${idris_plain.fname}";
 in
 rec {
   mkDerivation = { pname, version, buildDepends, src, buildInputs ? [] }:
