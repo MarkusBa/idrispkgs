@@ -14,7 +14,7 @@
          owner = "MarkusBa";
          repo = "Idris-dev";
          rev = "master";
-         sha256 = "c7ea19c8dddf60f2fa77cc9bf8ff2101679cb8c7da3fa9ec49b376a3deda6e6d";
+         sha256 = "54c521619edffd0ac9c5708b0c9f6f6bb46fd4188a6d32e0c1a4333e21d72d8a";
        };
        isLibrary = true;
        isExecutable = true;
