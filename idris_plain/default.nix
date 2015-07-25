@@ -5,17 +5,12 @@
      , network, optparse-applicative, parsers, pretty, process, safe
      , split, text, time, transformers, transformers-compat, trifecta
      , uniplate, unix, unordered-containers, utf8-string, vector
-     , vector-binary-instances, xml, zip-archive, zlib, stdenv
+     , vector-binary-instances, xml, zip-archive, zlib_0_5_4_2, stdenv
      }:
      mkDerivation {
        pname = "idris";
        version = "0.9.18.1";
-       src = fetchFromGitHub {
-         owner = "MarkusBa";
-         repo = "Idris-dev";
-         rev = "v0.9.18.1";
-         sha256 = "1c28hd49w6wmhycrp5a7pkdprylhaffbk6drn0b048cfgk7k01b6";
-       };
+       src = ./Idris-dev-0.9.18.1;
        isLibrary = true;
        isExecutable = true;
        buildDepends = [
@@ -25,7 +20,7 @@
          haskeline lens libffi mtl network optparse-applicative parsers
          pretty process safe split text time transformers
          transformers-compat trifecta uniplate unix unordered-containers
-         utf8-string vector vector-binary-instances xml zip-archive zlib
+         utf8-string vector vector-binary-instances xml zip-archive zlib_0_5_4_2
        ];
        buildTools = [ happy ];
        extraLibraries = [ boehmgc gmp ];

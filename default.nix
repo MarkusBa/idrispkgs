@@ -10,7 +10,7 @@
       network optparse-applicative parsers pretty process safe
       split text time transformers transformers-compat trifecta
       uniplate unix unordered-containers utf8-string vector
-      vector-binary-instances xml zip-archive zlib;}
+      vector-binary-instances xml zip-archive zlib_0_5_4_2;}
 }:
 
 with nixpkgs;
