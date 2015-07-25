@@ -16,7 +16,7 @@
 with nixpkgs;
 
 let
-  libraryDirectory = "${idris_plain.system}-ghc-${nixpkgs.haskellPackages.ghc.version}/${idris_plain.fname}";
+  libraryDirectory = "${idris_plain.system}-ghc-${nixpkgs.haskellPackages.ghc.version}";
 in
 rec {
   mkDerivation = { pname, version, buildDepends, src, buildInputs ? [] }:
