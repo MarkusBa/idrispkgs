@@ -1,5 +1,5 @@
 with import <nixpkgs> { };
-with import ./default.nix { };
+with import ./default.nix { stdenv = stdenv; };
 
 runCommand "dummy" {
   buildInputs = [
